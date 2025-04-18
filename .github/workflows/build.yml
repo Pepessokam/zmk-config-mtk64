@@ -3,3 +3,9 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    - name: Upload DTS file
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: zephyr-dts-${{ matrix.shield }}
+        path: build/zephyr/zephyr.dts
