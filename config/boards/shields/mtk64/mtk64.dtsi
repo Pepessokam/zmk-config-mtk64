@@ -157,15 +157,12 @@
         triggers-per-rotation = <10>;
     };
 
-    chosen {
-        zephyr,console = &dummy_uart;
+    dummy_console: dummy_console {
+        compatible = "zmk,dummy-device";
+        status = "disabled";
     };
 
-    dummy_uart: dummy_uart {
-        compatible = "nordic,nrf-uarte";
-        status = "disabled";
-        current-speed = <115200>;
-        reg = <0x40002000 0x1000>;
-        interrupts = <2 1>;
-    };
+    chosen {
+        zephyr,console = &dummy_console;
+    };	
 };
