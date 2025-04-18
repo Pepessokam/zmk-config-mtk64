@@ -1,0 +1,1 @@
+target_sources(app PRIVATE src/uart_test.c)
