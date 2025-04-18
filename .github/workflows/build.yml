@@ -1,42 +1,5 @@
-name: Build ZMK Config
-
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        board: [seeeduino_xiao_ble]
-        shield: [mtk64_R]
-    steps:
-      - name: Checkout your ZMK config
-        uses: actions/checkout@v3
-
-      - name: Set up Python and West
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install west and deps
-        run: |
-          pip install west
-          west init -l config
-          west update
-          west zephyr-export
-
-      - name: Build firmware
-        run: |
-          west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG=config
-
-      - name: Upload firmware (UF2)
-        uses: actions/upload-artifact@v3
-        with:
-          name: firmware-${{ matrix.shield }}
-          path: build/zephyr/zmk.uf2
-
-      - name: Upload DTS
-        uses: actions/upload-artifact@v3
-        with:
-          name: zephyr-dts-${{ matrix.shield }}
-          path: build/zephyr/zephyr.dts
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
