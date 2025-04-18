@@ -156,13 +156,4 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <10>;
     };
-
-    dummy_console: dummy_console {
-        compatible = "zmk,dummy-device";
-        status = "disabled";
-    };
-
-    chosen {
-        zephyr,console = &dummy_console;
-    };	
 };
