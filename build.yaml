@@ -21,7 +21,8 @@ include:
  - board: seeeduino_xiao_ble
    shield: mtk64_R rgbled_adapter
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_STUDIO=y
+   cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_UART_CONSOLE=n -DCONFIG_CONSOLE=n -DCONFIG_LOG_BACKEND_UART=n
+   overlay-config: config/right/disable_console.overlay
  - board: seeeduino_xiao_ble
    shield: mtk64_L rgbled_adapter
  - board: seeeduino_xiao_ble

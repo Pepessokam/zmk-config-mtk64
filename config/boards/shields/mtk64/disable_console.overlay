@@ -1,0 +1,13 @@
+/ {
+    chosen {
+        zephyr,console = &dummy_console;
+    };
+
+    dummy_console: dummy_console {
+        compatible = "nordic,nrf-uart"; // Zephyrが受け入れる既知の型
+        status = "disabled";
+        current-speed = <115200>;
+        reg = <0x40002000 0x1000>;
+        interrupts = <2 1>;
+    };
+};
