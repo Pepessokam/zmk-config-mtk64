@@ -67,7 +67,3 @@
     };
 };
 
-&uart0 {
-    current-speed = <115200>;
-    status = "okay";
-};
