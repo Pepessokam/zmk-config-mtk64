@@ -25,10 +25,10 @@
             label = "LAYER1_F14";
         };
 
-        layer2_f20: layer2_f20 {
+        layer2_f15: layer2_f20 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp F20>;
+            bindings = <&to 2 &kp F15>;
             label = "LAYER2_F20";
         };
 
@@ -59,6 +59,55 @@
             bindings = <&to 6 &kp F19>;
             label = "LAYER6_F19";
         };
+
+        Length1: Length1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(NUMBER_1)))>;
+            label = "LENGTH1";
+        };
+
+        Length2: Length2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(NUMBER_2)))>;
+            label = "LENGTH2";
+        };
+
+        Length4: Length4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(NUMBER_4)))>;
+            label = "LENGTH4";
+        };
+
+        Length8: Length8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(N8)))>;
+            label = "LENGTH8";
+        };
+
+        Length16: Length16 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(NUMBER_6)))>;
+            label = "LENGTH16";
+        };
+
+        Length32: Length32 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(NUMBER_3)))>;
+            label = "LENGTH32";
+        };
+
+        TripletOn: TripletOn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(F3)))>;
+            label = "TRIPLETON";
+        };
     };
 
     behaviors {
@@ -83,7 +132,7 @@
         layer2kp: layer2kp {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER2KP";
-            bindings = <&layer2_f20>, <&kp>;
+            bindings = <&layer2_f15>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -140,6 +189,69 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        Length1kp: Length1kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH1KP";
+            bindings = <&Length1>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Length2kp: Length2kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH2KP";
+            bindings = <&Length2>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Length4kp: Length4kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH4KP";
+            bindings = <&Length4>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Length8kp: Length8kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH8KP";
+            bindings = <&Length8>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Length16kp: Length16kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH16KP";
+            bindings = <&Length16>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Length32kp: Length32kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LENGTH32KP";
+            bindings = <&Length32>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        Triplet_kp: Triplet_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TRIPLET_KP";
+            bindings = <&Length32>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -157,13 +269,13 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans  &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp F12  &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &layer1kp 0 F1  &layer2kp 0 F2  &layer3kp 0 F3  &layer4kp 0 F4  &layer5kp 0 F5  &layer6kp 0 F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans  &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp F12  &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         studio_one {
             bindings = <
-&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp ESCAPE  &kp BACKSPACE  &kp N  &mkp_kp M LCLK  &mkp_kp COMMA MCLK  &mkp_kp DOT RCLK  &kp SLASH  &kp NON_US_BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp RIGHT_BRACKET  &kp EQUAL  &trans  &trans  &kp F3  &kp DELETE  &none  &none  &trans  &trans  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &Length1kp 0 Y  &Length2kp 0 U  &Length4kp 0 I  &Length8kp 0 O  &Length16kp 0 P  &Length32kp 0 LEFT_BRACKET  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &Triplet_kp 0 H  &mt NUMBER_1 J  &mt NUMBER_2 K  &mt NUMBER_3 L  &mt NUMBER_4 SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp ESCAPE  &kp BACKSPACE  &kp N  &mkp_kp M LCLK  &mkp_kp COMMA MCLK  &mkp_kp DOT RCLK  &kp SLASH  &kp NON_US_BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp RIGHT_BRACKET  &kp EQUAL  &trans  &trans  &kp F3  &kp DELETE  &none  &none  &trans  &trans  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp LS(E) LS(W)>, <&inc_dec_kp E W>;
@@ -201,7 +313,7 @@
 
         layer_6 {
             bindings = <
-&layer0_f13  &layer1_f14  &layer2_f20  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &trans  &trans  &trans  &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &trans  &trans  &trans  &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
