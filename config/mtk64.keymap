@@ -25,11 +25,11 @@
             label = "LAYER1_F14";
         };
 
-        layer2_f15: layer2_f15 {
+        layer2_f20: layer2_f20 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp F15>;
-            label = "LAYER2_F15";
+            bindings = <&to 2 &kp F20>;
+            label = "LAYER2_F20";
         };
 
         layer3_f16: layer3_f16 {
@@ -83,7 +83,7 @@
         layer2kp: layer2kp {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER2KP";
-            bindings = <&layer2_f15>, <&kp>;
+            bindings = <&layer2_f20>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -186,7 +186,7 @@
 
         layer_6 {
             bindings = <
-&layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &trans  &trans  &trans  &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&layer0_f13  &layer1_f14  &layer2_f20  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &trans  &trans  &trans  &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
