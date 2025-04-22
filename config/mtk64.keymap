@@ -131,7 +131,7 @@
 
         default_layer {
             bindings = <
-&layer1kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp ESCAPE  &kp BACKSPACE  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp NON_US_BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp RIGHT_BRACKET  &kp EQUAL  &to 0  &to 6  &to 2  &kp DELETE  &none  &none  &mo 1  &mo 1  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LEFT_BRACKET  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp ESCAPE  &kp BACKSPACE  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp NON_US_BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp RIGHT_BRACKET  &kp EQUAL  &to 0  &to 6  &to 2  &kp DELETE  &none  &none  &mo 1  &mo 1  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings = <
