@@ -140,7 +140,7 @@
             bindings = <&layer0_f13>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer1kp: layer1kp {
@@ -149,7 +149,7 @@
             bindings = <&layer1_f14>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer2kp: layer2kp {
@@ -158,7 +158,7 @@
             bindings = <&layer2_f15>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer3kp: layer3kp {
@@ -167,7 +167,7 @@
             bindings = <&layer3_f16>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer4kp: layer4kp {
@@ -176,7 +176,7 @@
             bindings = <&layer4_f17>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer5kp: layer5kp {
@@ -185,7 +185,7 @@
             bindings = <&layer5_f18>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         layer6kp: layer6kp {
@@ -194,7 +194,7 @@
             bindings = <&layer6_f19>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
         };
 
         inc_dec_msc: inc_dec_msc {
@@ -275,24 +275,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_UP_DOWN";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
-
-        scroll_left_right: scroll_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_LEFT_RIGHT";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
-            tap-ms = <20>;
-        };
     };
 
     combos {
@@ -307,7 +289,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Windows {
             bindings = <
 &layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &layer0_f13  &layer6_f19  &InputChange  &kp EXCLAMATION  &none  &none  &mo 5  &mo 5  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
@@ -333,9 +315,9 @@
             sensor-bindings = <&inc_dec_kp LS(H) LS(G)>, <&inc_dec_kp H G>;
         };
 
-        layer_Mac {
+        Mac {
             bindings = <
-&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &layer0_f13  &layer6_f19  &InputChangeMac  &kp EXCLAMATION  &none  &none  &mo 1  &mo 1  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &layer0_f13  &layer6_f19  &InputChangeMac  &kp EXCLAMATION  &none  &none  &mo 5  &mo 5  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings =
@@ -354,13 +336,13 @@
             >;
         };
 
-        layer_5 {
+        NumberPad {
             bindings = <
 &trans  &layer1kp 0 F1  &layer2kp 0 F2  &layer3kp 0 F3  &layer4kp 0 F4  &layer5kp 0 F5  &layer6kp 0 F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans  &kp KP_MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE  &kp F12  &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &kp KP_PLUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        layer_6 {
+        Setting {
             bindings = <
 &layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &trans  &trans  &trans  &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
