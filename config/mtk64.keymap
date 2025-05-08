@@ -140,7 +140,7 @@
             bindings = <&layer0_f13>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer1kp: layer1kp {
@@ -149,7 +149,7 @@
             bindings = <&layer1_f14>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer2kp: layer2kp {
@@ -158,7 +158,7 @@
             bindings = <&layer2_f15>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer3kp: layer3kp {
@@ -167,7 +167,7 @@
             bindings = <&layer3_f16>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer4kp: layer4kp {
@@ -176,7 +176,7 @@
             bindings = <&layer4_f17>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer5kp: layer5kp {
@@ -185,7 +185,7 @@
             bindings = <&layer5_f18>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         layer6kp: layer6kp {
@@ -194,7 +194,7 @@
             bindings = <&layer6_f19>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1500>;
         };
 
         inc_dec_msc: inc_dec_msc {
