@@ -23,21 +23,21 @@
         layer1_f14: layer1_f14 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 3 &kp F14>;
+            bindings = <&to 1 &kp F14>;
             label = "LAYER1_F14";
         };
 
         layer2_f15: layer2_f20 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &kp F15>;
+            bindings = <&to 2 &kp F15>;
             label = "LAYER2_F20";
         };
 
         layer3_f16: layer3_f16 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp F16>;
+            bindings = <&to 3 &kp F16>;
             label = "LAYER3_F16";
         };
 
