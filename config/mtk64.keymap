@@ -304,7 +304,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>,
-                <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+                <&inc_dec_kp LC(EQUAL) LC(MINUS)>;
         };
 
         Nuendo {
