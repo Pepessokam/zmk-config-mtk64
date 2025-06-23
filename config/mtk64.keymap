@@ -322,7 +322,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LEFT_ARROW LEFT_ARROW>,
-                <&inc_dec_kp LG(LS(EQUAL)) LG(MINUS)>;
+                <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
         studio_one {
