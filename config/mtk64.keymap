@@ -299,7 +299,7 @@
 
         Windows {
             bindings = <
-&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &Input_Bracket  &kp DELETE  &layer1_f14  &layer6_f19  &InputChange  &kp ESCAPE  &none  &none  &mo 5  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5
+&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &Input_Bracket  &kp DELETE  &layer0_f13  &layer6_f19  &InputChange  &kp ESCAPE  &none  &none  &mo 5  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5
             >;
 
             sensor-bindings =
@@ -309,7 +309,7 @@
 
         Nuendo {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &mo 0  &mo 0  &trans  &trans  &mo 0  &trans  &trans  &mo 0  &trans  &trans  &mo 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &layer1_f14  &trans  &trans  &trans  &none  &none  &mo 5  &mo 0  &trans  &trans  &mo 0  &trans  &trans  &mo 0  &trans  &trans  &mo 0
             >;
 
             sensor-bindings = <&inc_dec_kp LS(H) LS(G)>, <&inc_dec_kp H G>;
@@ -317,7 +317,7 @@
 
         Mac {
             bindings = <
-&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &mt LG(Z) Z  &mt LG(X) X  &mt LG(C) C  &mt LG(V) V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &Input_Bracket  &kp DELETE  &layer3_f16  &layer6_f19  &InputChangeMac  &kp ESC  &none  &none  &mo 5  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5
+&layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp SQT  &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp EQUAL  &kp LSHFT  &mt LG(Z) Z  &mt LG(X) X  &mt LG(C) C  &mt LG(V) V  &kp B  &kp AT_SIGN  &kp MINUS  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH  &kp LALT  &kp LGUI  &mkp MB1  &mkp MB2  &kp SPACE  &kp ENTER  &Input_Bracket  &kp DELETE  &layer2_f15  &layer6_f19  &InputChangeMac  &kp ESC  &none  &none  &mo 5  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5  &mo 6  &kp LEFT_SHIFT  &mo 5
             >;
 
             sensor-bindings =
@@ -327,7 +327,7 @@
 
         studio_one {
             bindings = <
-&layer0kp 0 GRAVE  &layer1kp 0 F1  &layer2kp 0 F2  &layer3kp 0 F3  &layer4kp 0 F4  &layer5kp 0 F5  &layer6kp 0 F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BACKSPACE  &kp TAB  &mt LS(Q) Q  &kp W  &mt LG(LS(E)) LG(E)  &kp R  &kp T  &Length1kp 0 Y  &Length2kp 0 U  &Length4kp 0 I  &Length8kp 0 O  &Length16kp 0 P  &Length32kp 0 SLASH  &kp LCTRL  &mt A LG(A)  &mt LG(S) S  &kp D  &kp F  &kp G  &mt LC(LS(LG(H))) LS(LA(LC(H)))  &mt NUMBER_5 NUMBER_1  &mt NUMBER_6 NUMBER_2  &mt NUMBER_7 NUMBER_3  &mt NUMBER_9 NUMBER_4  &Triplet_kp 0 LA(LC(LG(O)))  &kp LSHFT  &mt LG(Y) LG(Z)  &kp X  &kp LG(C)  &mt LC(LS(LA(V))) LG(V)  &kp LC(LA(LS(B)))  &mt LA(LG(KP_NUMBER_3)) LA(LG(KP_NUMBER_4))  &kp MINUS  &kp LA(N)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LA(LS(LG(I)))  &kp LS(LA(LG(O)))  &kp LALT  &kp LGUI  &mt M LS(M)  &mkp MB2  &kp SPACE  &kp ENTER  &kp LS(LC(LG(LEFT_ARROW)))  &mt LS(LC(F1)) LS(LC(LG(RIGHT_ARROW)))  &layer2_f15  &trans  &kp F3  &kp KP_NUMBER_1  &none  &none  &mo 5  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2
+&layer0kp 0 GRAVE  &layer1kp 0 F1  &layer2kp 0 F2  &layer3kp 0 F3  &layer4kp 0 F4  &layer5kp 0 F5  &layer6kp 0 F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BACKSPACE  &kp TAB  &mt LS(Q) Q  &kp W  &mt LG(LS(E)) LG(E)  &kp R  &kp T  &Length1kp 0 Y  &Length2kp 0 U  &Length4kp 0 I  &Length8kp 0 O  &Length16kp 0 P  &Length32kp 0 SLASH  &kp LCTRL  &mt A LG(A)  &mt LG(S) S  &kp D  &kp F  &kp G  &mt LC(LS(LG(H))) LS(LA(LC(H)))  &mt NUMBER_5 NUMBER_1  &mt NUMBER_6 NUMBER_2  &mt NUMBER_7 NUMBER_3  &mt NUMBER_9 NUMBER_4  &Triplet_kp 0 LA(LC(LG(O)))  &kp LSHFT  &mt LG(Y) LG(Z)  &kp X  &kp LG(C)  &mt LC(LS(LA(V))) LG(V)  &kp LC(LA(LS(B)))  &mt LA(LG(KP_NUMBER_3)) LA(LG(KP_NUMBER_4))  &kp MINUS  &kp LA(N)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LA(LS(LG(I)))  &kp LS(LA(LG(O)))  &kp LALT  &kp LGUI  &mt M LS(M)  &mkp MB2  &kp SPACE  &kp ENTER  &kp LS(LC(LG(LEFT_ARROW)))  &mt LS(LC(F1)) LS(LC(LG(RIGHT_ARROW)))  &layer3_f16  &trans  &kp F3  &kp KP_NUMBER_1  &none  &none  &mo 5  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2  &kp KP_NUMBER_1  &kp SPACE  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp LS(W) LS(E)>, <&inc_dec_kp W E>;
