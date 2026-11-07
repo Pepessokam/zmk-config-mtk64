@@ -1,5 +1,6 @@
 #include "mtk64.dtsi"
 #include "mtk64_trackball.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
 
 / {
     chosen {
@@ -35,7 +36,8 @@
 
         scroll {
             layers = <4>; // NumberPad (mtk64 Rev.1 フォーク設定)
-            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_inverter>, <&zip_scroll_scaler 1 64>;
+            // 縦スクロールのみ反転 (Rev.1 フォークの旧 pmw3610 ドライバと同じ向き。横は rev3 標準のまま)
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_scroll_inverter>, <&zip_scroll_scaler 1 64>;
             process-next;
         };
     };
