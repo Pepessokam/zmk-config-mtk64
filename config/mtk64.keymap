@@ -319,7 +319,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>,
-                <&inc_dec_kp (LC(MINUS)) LC(PLUS)>;
+                <&inc_dec_kp LC(MINUS) LC(KP_PLUS)>;
         };
 
         Mac {
@@ -336,8 +336,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LEFT_ARROW LEFT_ARROW>,
-                <&inc_dec_kp LG(MINUS) LG(PLUS)>;
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>,
+                <&inc_dec_kp LG(MINUS) LG(KP_PLUS)>;
         };
 
         Nuendo {
