@@ -33,14 +33,8 @@
         device = <&trackball>;
         input-processors = <&zip_aml 6 5000>, <&zip_dynamic_rate_limit 1 8>;
 
-        snipe {
-            layers = <1>;
-            input-processors = <&zip_xy_scaler 1 2>;
-            process-next;
-        };
-
         scroll {
-            layers = <3>;
+            layers = <4>; // NumberPad (mtk64 Rev.1 フォーク設定)
             input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_inverter>, <&zip_scroll_scaler 1 64>;
             process-next;
         };
