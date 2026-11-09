@@ -14,11 +14,6 @@
     tapping-term-ms = <800>;
 };
 
-// Auto Mouse Layer: マウスボタン操作時もレイヤー6(AML)を維持
-&mkp_input_listener {
-    input-processors = <&zip_aml 6 5000>;
-};
-
 / {
     macros {
         layer0_f13: trasn_f13 {
@@ -136,8 +131,17 @@
         InputChangeMac: InputChangeMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
+            // 押すたびに かな(LANG1) / 英数(LANG2) を交互に送る。
+            // かな送信と同時にレイヤー6(MacKana)を ON にし、次の押下で英数を送って OFF に戻す
+            bindings = <&kp LANG1 &tog 6>;
             label = "INPUTCHANGEMAC";
+        };
+
+        InputChangeMacEisu: InputChangeMacEisu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &tog 6>;
+            label = "INPUTCHANGEMACEISU";
         };
 
         Input_Bracket: Input_Bracket {
@@ -367,22 +371,21 @@
 
         Setting {
             bindings = <
-&layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &cpi_dec  &cpi_inc  &aml_tog  &scrl_inv_tog  &studio_unlock  &kp TAB  &kp Q  &kp W  &kp E  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &cpi_dec  &cpi_inc  &trans  &scrl_inv_tog  &studio_unlock  &kp TAB  &kp Q  &kp W  &kp E  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        // Rev3: トラックボール操作で自動的に有効になるレイヤー (Auto Mouse Layer)
-        // Setting レイヤーの aml_tog で ON/OFF 切替 (状態は保存されます)
-        AML {
-            display-name = "AML";
+        // Mac の言語切替キーの状態保持用 (かな入力中だけ ON。同じ位置で英数を送って OFF)
+        MacKana {
+            display-name = "MacKana";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans
+                &trans  &InputChangeMacEisu
                 &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans
             >;
