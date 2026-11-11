@@ -16,55 +16,6 @@
 
 / {
     macros {
-        layer0_f13: trasn_f13 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &kp F13>;
-            label = "TRASN_F13";
-        };
-
-        layer1_f14: layer1_f14 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2 &kp F14>;
-            label = "LAYER1_F14";
-        };
-
-        layer2_f15: layer2_f20 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1 &kp F15>;
-            label = "LAYER2_F20";
-        };
-
-        layer3_f16: layer3_f16 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &kp F16>;
-            label = "LAYER3_F16";
-        };
-
-        layer4_f17: layer4_f17 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 3 &kp F17>;
-            label = "LAYER4_F17";
-        };
-
-        layer5_f18: layer5_f18 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 4 &kp F18>;
-            label = "LAYER5_F18";
-        };
-
-        layer6_f19: layer6_f19 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 5 &kp F19>;
-            label = "LAYER6_F19";
-        };
-
         Length1: Length1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -153,64 +104,11 @@
     };
 
     behaviors {
-        layer0kp: layer0kp {
+        // タップでキー入力、長押しでレイヤー移動:  &to_kp <レイヤー番号> <キー>
+        to_kp: to_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER0KP";
-            bindings = <&layer0_f13>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer1kp: layer1kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER1KP";
-            bindings = <&layer1_f14>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer2kp: layer2kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER2KP";
-            bindings = <&layer2_f15>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer3kp: layer3kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER3KP";
-            bindings = <&layer3_f16>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer4kp: layer4kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER4KP";
-            bindings = <&layer4_f17>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer5kp: layer5kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER5KP";
-            bindings = <&layer5_f18>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <750>;
-        };
-
-        layer6kp: layer6kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER6KP";
-            bindings = <&layer6_f19>, <&kp>;
+            label = "TO_KP";
+            bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <750>;
@@ -310,15 +208,15 @@
 
         Windows {
             bindings = <
-                &layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7              &kp N8  &kp N9  &kp N0         &kp BACKSPACE
-                &kp TAB            &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U               &kp I   &kp O   &kp P          &kp SQT
-                &kp LCTRL          &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J               &kp K   &kp L   &kp SEMICOLON  &kp EQUAL
-                &kp LSHFT          &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp AT_SIGN           &kp MINUS           &kp N   &kp M   &kp COMMA      &kp DOT        &kp SLASH  &kp BACKSLASH
-                &kp LALT           &kp LGUI              &mkp MB1              &mkp MB2              &kp SPACE             &kp ENTER             &Input_Bracket        &kp LC(LA(DELETE))
-                &layer0_f13        &layer6_f19           &mkp MB3              &kp DELETE            &none                 &none
-                &mo 4              &InputChange
-                &mo 5              &kp LEFT_SHIFT        &mo 4                 &mo 5                 &kp LEFT_SHIFT        &mo 4
-                &mo 5              &kp LEFT_SHIFT        &mo 4
+                &to_kp 0 GRAVE  &to_kp 1 NUMBER_1  &to_kp 2 NUMBER_2  &to_kp 3 NUMBER_3  &to_kp 4 NUMBER_4  &to_kp 5 NUMBER_5  &kp NUMBER_6    &kp N7              &kp N8  &kp N9  &kp N0         &kp BACKSPACE
+                &kp TAB         &kp Q              &kp W              &kp E              &kp R              &kp T              &kp Y           &kp U               &kp I   &kp O   &kp P          &kp SQT
+                &kp LCTRL       &kp A              &kp S              &kp D              &kp F              &kp G              &kp H           &kp J               &kp K   &kp L   &kp SEMICOLON  &kp EQUAL
+                &kp LSHFT       &kp Z              &kp X              &kp C              &kp V              &kp B              &kp AT_SIGN     &kp MINUS           &kp N   &kp M   &kp COMMA      &kp DOT        &kp SLASH  &kp BACKSLASH
+                &kp LALT        &kp LGUI           &mkp MB1           &mkp MB2           &kp SPACE          &kp ENTER          &Input_Bracket  &kp LC(LA(DELETE))
+                &to 0           &to 5              &mkp MB3           &kp DELETE         &none              &none
+                &mo 4           &InputChange
+                &mo 5           &kp LEFT_SHIFT     &mo 4              &mo 5              &kp LEFT_SHIFT     &mo 4
+                &mo 5           &kp LEFT_SHIFT     &mo 4
             >;
 
             sensor-bindings =
@@ -328,15 +226,15 @@
 
         Mac {
             bindings = <
-                &layer0kp 0 GRAVE  &layer1kp 0 NUMBER_1  &layer2kp 0 NUMBER_2  &layer3kp 0 NUMBER_3  &layer4kp 0 NUMBER_4  &layer5kp 0 NUMBER_5  &layer6kp 0 NUMBER_6  &kp N7      &kp N8  &kp N9  &kp N0         &kp BACKSPACE
-                &kp TAB            &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U       &kp I   &kp O   &kp P          &kp SQT
-                &kp LCTRL          &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J       &kp K   &kp L   &kp SEMICOLON  &kp EQUAL
-                &kp LSHFT          &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp AT_SIGN           &kp MINUS   &kp N   &kp M   &kp COMMA      &kp DOT        &kp SLASH  &kp BACKSLASH
-                &kp LALT           &kp LGUI              &mkp MB1              &mkp MB2              &kp SPACE             &kp ENTER             &Input_Bracket        &kp DELETE
-                &layer2_f15        &layer6_f19           &mkp MCLK             &kp DELETE            &none                 &none
-                &mo 4              &InputChangeMac
-                &mo 5              &kp LEFT_SHIFT        &mo 4                 &mo 5                 &kp LEFT_SHIFT        &mo 4
-                &mo 5              &kp LEFT_SHIFT        &mo 4
+                &to_kp 0 GRAVE  &to_kp 1 NUMBER_1  &to_kp 2 NUMBER_2  &to_kp 3 NUMBER_3  &to_kp 4 NUMBER_4  &to_kp 5 NUMBER_5  &kp NUMBER_6    &kp N7      &kp N8  &kp N9  &kp N0         &kp BACKSPACE
+                &kp TAB         &kp Q              &kp W              &kp E              &kp R              &kp T              &kp Y           &kp U       &kp I   &kp O   &kp P          &kp SQT
+                &kp LCTRL       &kp A              &kp S              &kp D              &kp F              &kp G              &kp H           &kp J       &kp K   &kp L   &kp SEMICOLON  &kp EQUAL
+                &kp LSHFT       &kp Z              &kp X              &kp C              &kp V              &kp B              &kp AT_SIGN     &kp MINUS   &kp N   &kp M   &kp COMMA      &kp DOT        &kp SLASH  &kp BACKSLASH
+                &kp LALT        &kp LGUI           &mkp MB1           &mkp MB2           &kp SPACE          &kp ENTER          &Input_Bracket  &kp DELETE
+                &to 1           &to 5              &mkp MCLK          &kp DELETE         &none              &none
+                &mo 4           &InputChangeMac
+                &mo 5           &kp LEFT_SHIFT     &mo 4              &mo 5              &kp LEFT_SHIFT     &mo 4
+                &mo 5           &kp LEFT_SHIFT     &mo 4
             >;
 
             sensor-bindings =
@@ -346,7 +244,15 @@
 
         Nuendo {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &layer1_f14  &trans  &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &to 2   &trans  &trans  &trans  &none   &none
+                &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(H) LS(G)>, <&inc_dec_kp H G>;
@@ -365,13 +271,29 @@
 
         NumberPad {
             bindings = <
-&trans  &layer1kp 0 F1  &layer2kp 0 F2  &layer3kp 0 F3  &layer4kp 0 F4  &layer5kp 0 F5  &layer6kp 0 F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans  &kp KP_MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE  &kp F12  &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans  &kp KP_PLUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &to_kp 1 F1  &to_kp 2 F2     &to_kp 3 F3   &to_kp 4 F4    &to_kp 5 F5  &kp F6            &kp F7             &kp F8           &kp F9           &kp F10          &kp F11
+                &trans  &trans       &kp PAGE_UP     &kp UP_ARROW  &kp PAGE_DOWN  &trans       &kp KP_MINUS      &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE    &kp F12
+                &trans  &trans       &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &trans       &kp KP_PLUS       &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK  &trans
+                &trans  &trans       &trans          &trans        &trans         &trans       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
+                &trans  &trans       &trans          &trans        &trans         &trans       &kp KP_EQUAL      &trans
+                &trans  &trans       &trans          &trans        &trans         &trans
+                &trans  &trans
+                &trans  &trans       &trans          &trans        &trans         &trans
+                &trans  &trans       &trans
             >;
         };
 
         Setting {
             bindings = <
-&layer0_f13  &layer1_f14  &layer2_f15  &layer3_f16  &layer4_f17  &layer5_f18  &layer6_f19  &cpi_dec  &cpi_inc  &trans  &scrl_inv_tog  &studio_unlock  &kp TAB  &kp Q  &kp W  &kp E  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &trans  &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &mkp MB4  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &to 0             &to 1         &to 2   &to 3   &to 4   &to 5   &trans           &cpi_dec       &cpi_inc       &trans         &scrl_inv_tog  &studio_unlock
+                &kp TAB           &kp Q         &kp W   &kp E   &trans  &trans  &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+                &kp LEFT_CONTROL  &kp A         &kp S   &kp D   &trans  &trans  &bt BT_DISC 0    &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+                &kp LEFT_SHIFT    &trans        &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &mkp MB4       &mkp MB5       &mkp LCLK      &mkp MCLK      &mkp RCLK       &trans  &trans
+                &kp LEFT_ALT      &kp LEFT_GUI  &trans  &trans  &trans  &trans  &trans           &bootloader
+                &trans            &trans        &trans  &trans  &trans  &trans
+                &trans            &trans
+                &trans            &trans        &trans  &trans  &trans  &trans
+                &trans            &trans        &trans
             >;
         };
 
